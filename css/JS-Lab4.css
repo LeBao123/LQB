@@ -1,0 +1,39 @@
+/* .card{
+    background-color:#00b0d3;
+    color: white;
+} */
+/* .left-column{
+    width: 33.333%;
+    float: left;
+}
+.mid-column{
+    width: 33.333%;
+    float: center;
+}
+.right-column{
+    width: 33.333%;
+    float: right;
+
+} */
+/* .card-img-top{position: relative;
+    right: -37%;
+    top: -200px;
+ }
+ .right-column{
+    width: 33.333%;
+    float: right;
+ } */
+.container {
+    width: 50%;
+    background-color: #19bae5;
+    color: white;
+}
+.tem {
+    font-size: 30px;
+    font-weight: 300;
+}
+.date {
+    font-size: 23px;
+    color: #ffffff;
+    opacity: 0.7;
+}

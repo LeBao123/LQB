@@ -1,0 +1,16 @@
+*{
+    font-family: 'Karma', serif;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.images{
+    display: flex;
+    justify-content: center;
+}
+.TAGS{
+    display: inherit;
+}

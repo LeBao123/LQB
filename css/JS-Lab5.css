@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: rgba(63, 139, 167, 0.973);
+}
+.card-img-top{position: relative;
+   right: -150px;
+   top: -100px;
+   border: 100;
+}

@@ -1,0 +1,240 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="JS-Lab5.css"/>
+    <link rel="stylesheet" href="vendors/bootstrap v5.3/css/bootstrap.css"/>
+    <link rel="stylesheet" href="vendors/bootstrap v5.3/css/bootstrap.css.map"/>
+    <link rel="stylesheet" href="vendors/bootstrap v5.3/css/bootstrap.min.css.map"/>
+    <title>Weather</title>
+</head>
+<body>  
+        <section>
+            <div class="container">
+                <div class="row" id="list-weather">
+                     <!-- <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-09 15:00:00</p>
+                                <p class="temperature mt-1 fs-3">27<sup>o</sup>C</p>
+                                <p class="weather mt-1">broken clouds</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-09 18:00:00</p>
+                                <p class="temperature mt-1 fs-3">25.73<sup>o</sup>C</p>
+                                <p class="weather mt-1">broken clouds</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-09 21:00:00</p>
+                                <p class="temperature mt-1 fs-3">24.44<sup>o</sup>C</p>
+                                <p class="weather mt-1">overcast clouds</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-10 00:00:00</p>
+                                <p class="temperature mt-1 fs-3">23.37<sup>o</sup>C</p>
+                                <p class="weather mt-1">light rain</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-10 03:00:00</p>
+                                <p class="temperature mt-1 fs-3">25.7<sup>o</sup>C</p>
+                                <p class="weather mt-1">light rain</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-10 06:00:00</p>
+                                <p class="temperature mt-1 fs-3">27.5<sup>o</sup>C</p>
+                                <p class="weather mt-1">overcast clouds</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-10 06:00:00</p>
+                                <p class="temperature mt-1 fs-3">28.81<sup>o</sup>C</p>
+                                <p class="weather mt-1">overcast clouds</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-10 12:00:00</p>
+                                <p class="temperature mt-1 fs-3">25.47<sup>o</sup>C</p>
+                                <p class="weather mt-1">overcast clouds</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-10 15:00:00</p>
+                                <p class="temperature mt-1 fs-3">24.55<sup>o</sup>C</p>
+                                <p class="weather mt-1">light rain</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-10 18:00:00</p>
+                                <p class="temperature mt-1 fs-3">24.2<sup>o</sup>C</p>
+                                <p class="weather mt-1">light rain</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-10 21:00:00</p>
+                                <p class="temperature mt-1 fs-3">23.68<sup>o</sup>C</p>
+                                <p class="weather mt-1">broken clouds</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-11 00:00:00</p>
+                                <p class="temperature mt-1 fs-3">24.99<sup>o</sup>C</p>
+                                <p class="weather mt-1">overcast clouds</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-11 03:00:00</p>
+                                <p class="temperature mt-1 fs-3">30.04<sup>o</sup>C</p>
+                                <p class="weather mt-1">light rain</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-11 06:00:00</p>
+                                <p class="temperature mt-1 fs-3">32.56<sup>o</sup>C</p>
+                                <p class="weather mt-1">light rain</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-11 12:00:00</p>
+                                <p class="temperature mt-1 fs-3">29.01<sup>o</sup>C</p>
+                                <p class="weather mt-1">light rain</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">2022-09-11 12:00:00</p>
+                                <p class="temperature mt-1 fs-3">25.49<sup>o</sup>C</p>
+                                <p class="weather mt-1">light rain</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            </div> 
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            var xhttp = new XMLHttpRequest();
+            xhttp.onload = function(){
+                var data = this.responseText;
+                console.log(data.list[0]);
+                console.log(data.list[0].weather[0].icon);
+                data = JSON.parse(data)
+                for (var i=0;i<data.list.lenght;i++){
+                    var col_3 =`                    
+                    <div class="col-3">
+                        <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
+                            <div class="col">
+                                <p class="time mt-2 mb-0">${data.list[i].dt_txt}</p>
+                                <p class="temperature mt-1 fs-3">27<sup>o</sup>C</p>
+                                <p class="weather mt-1">${data.list[i].weather[0].description}</p>
+                            </div>   
+                            <div class="card-img-top">                           
+                                <img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}04n@2x.png" alt="">
+                            </div>    
+                        </div>
+                    </div>`;
+                }
+            }
+            document.getElementById("list-weather").innerHTML +=col_3;
+            xhttp.open("GET","https://api.openweathermap.org/data/2.5/forecast?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric");
+            xhttp.send();
+        </script>
+</body>
+</html>

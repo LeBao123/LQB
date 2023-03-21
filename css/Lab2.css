@@ -1,0 +1,21 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    display: flex;
+    align-items: center;
+}
+.bg{
+    padding-right: 252px;
+    
+}
+.bg1{
+    padding-right: 312px;
+}
+.dropdown{position: relative;
+    right: -150px;
+    top: -100px;
+    border: 100;
+}
