@@ -212,17 +212,16 @@
         <script type="text/javascript">
             var xhttp = new XMLHttpRequest();
             xhttp.onload = function(){
-                var data = this.responseText;
+                var data = JSON.Parse(this.responseText);
                 console.log(data.list[0]);
                 console.log(data.list[0].weather[0].icon);
-                data = JSON.parse(data)
-                for (var i=0;i<data.list.lenght;i++){
+                for (var i=0;i<data.list.length;i++){
                     var col_3 =`                    
                     <div class="col-3">
                         <div class="card mb-4 px-2" style="background-color: darkgray; color: white;"> 
                             <div class="col">
                                 <p class="time mt-2 mb-0">${data.list[i].dt_txt}</p>
-                                <p class="temperature mt-1 fs-3">27<sup>o</sup>C</p>
+                                <p class="temperature mt-1 fs-3">${data.list[i].main.temp}<sup>o</sup>C</p>
                                 <p class="weather mt-1">${data.list[i].weather[0].description}</p>
                             </div>   
                             <div class="card-img-top">                           
@@ -230,9 +229,9 @@
                             </div>    
                         </div>
                     </div>`;
+                 document.getElementById("list-weather").innerHTML +=col_3;
                 }
             }
-            document.getElementById("list-weather").innerHTML +=col_3;
             xhttp.open("GET","https://api.openweathermap.org/data/2.5/forecast?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric");
             xhttp.send();
         </script>
