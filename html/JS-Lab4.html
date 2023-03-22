@@ -191,180 +191,46 @@
                 "cod":200
             }
         ]
-         document.getElementById("weather").innerText = product.description;
-         document.getElementById("wspeed").innerText = product.wind.speed;
-        // for(var i=0;i<w.length;i++){
-        //     var w = product[i]
-        //     var coord = p.coord;
-        //     var weather = p.weather;
-        //     var li = `                
-        //         <div class="col-3">
-        //             <div class="location d-flex justify-content-center align-items-center mb-4">
-        //                 <div class="col-1">
-        //                     <i class="bi bi-geo-alt-fill"></i>
-        //                 </div>
-        //                 <div class="col-11 px-4">
-        //                     <h3 id="position">Seattle</h3>
-        //                 </div>
-        //             </div>
-        //             <div class="time d-flex justify-content-center align-items-center mb-4">
-        //                 <div class="col-1"></div>
-        //                 <div class="col-11 px-4">
-        //                     <p class="m-0">September 15</p>
-        //                     <p class="">Monday</p>
-        //                 </div>
-        //             </div>
-        //             <div class="temperature d-flex justify-content-center align-items-center">
-        //                 <div class="col-1">
-        //                     <i class="bi bi-thermometer-half fs-1"></i>
-        //                 </div>
-        //                 <div class="col-11 px-2">
-        //                     <h1 id="temp" class="px-3"> 25<sup>o</sup></h1>
-        //                 </div>
-        //             </div>
-        //             <div class="temperature d-flex justify-content-center align-items-center">
-        //                 <div class="col-1"></div>
-        //                 <div class="col-11 px-4">
-        //                     <p id="feel">Feels like 23<sup>o</sup></p>
-        //                 </div>
-        //             </div>
-        //         </div>`;
-        //     document.getElementById("info").innerHTML +=li    
-        // }
-    </script>
-</body>
-</html>
-    <!-- <section>
-        <div class="container">
-            <h2>Các sản phẩm liên quan</h2>
-            <div class="row" id="list">
-                
-            </div>
-        </div>
-    </section>
-    <script type="text/javascript">
-        // AJAX
-        var xhttp = new XMLHttpRequest(); // shipper
-        xhttp.onload = function(){ // callback function
-           // những việc sẽ làm khi nhận được dữ liệu trả về 
-           var rs = this.responseText;
-           var data = JSON.parse(rs);
-        //    console.log(data);
-           var products = data.products;
-           for(var i =0;i<products.length;i++){
-            var p = products[i];
-            var thumb = p.thumbnail;
-            var title = p.title;
-            var desc = p.description;
-            var li = `<div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="${thumb}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">${title}</h5>
-                          <p class="card-text">${desc}</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+         var xhttp = new XMLHttpRequest ();
+         xhttp.onload = function(){
+            var data = JSON.parse(this.responseText);
+            console.log(data.product[0]);
+            console.log(data.weather[0].wind[0].icon);
+            var col_3 =`<div class="col-3">
+                    <div class="location d-flex justify-content-center align-items-center mb-4">
+                        <div class="col-1">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div class="col-11 px-4">
+                            <h3 id="position">Seattle</h3>
+                        </div>
+                    </div>
+                    <div class="time d-flex justify-content-center align-items-center mb-4">
+                        <div class="col-1"></div>
+                        <div class="col-11 px-4">
+                            <p class="m-0">September 15</p>
+                            <p class="">Monday</p>
+                        </div>
+                    </div>
+                    <div class="temperature d-flex justify-content-center align-items-center">
+                        <div class="col-1">
+                            <i class="bi bi-thermometer-half fs-1"></i>
+                        </div>
+                        <div class="col-11 px-2">
+                            <h1 id="temp" class="px-3">${data.product[i].base.stations.main.temp}<sup>o</sup></h1>
+                        </div>
+                    </div>
+                    <div class="temperature d-flex justify-content-center align-items-center">
+                        <div class="col-1"></div>
+                        <div class="col-11 px-4">
+                            <p id="feel">${data.product[i].weather[0].description} 23<sup>o</sup></p>
                         </div>
                     </div>
                 </div>`;
-            document.getElementById("list").innerHTML += li;        
-        }
-        }    
-        xhttp.open("GET","https://dummyjson.com/products?limit=100");
-        xhttp.send(); -->
+                document.getElementById('info').innerHTML += col_3;
+            }
+            xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric");
+            xhttp.send();
     </script>
-
-                    <!-- <div class="card d-flex justify-content-center">
-        <div class="col-12">
-            <p class="fs-4 p-4 mt-2"><i class="bi bi-geo-alt"></i> Seattle</p>
-            <p style="padding-left: 9%; margin-top: -2%;">September 15</p>
-            <p style="padding-left: 9%; margin-top: -2%;">Monday</p>
-            <p class="fs-1 p-4" style="margin-top: -2%;"><i class=" fs-2 bi bi-thermometer-half"></i>25<sup>o</sup></p>
-            <p style="padding-left: 9%; margin-top: -7%;">Feels like 23<sup>o</sup></p>                        
-        </div> -->
-
-
-
-        <!-- <div class="row">
-            <div class="col-6 ">
-                <div class="card">
-                    <div class="card d-flex justify-content-center">
-                        <div class="col-3">
-                            <p class="fs-4 p-4 mt-2"><i class="bi bi-geo-alt"></i> Seattle</p>
-                            <p style="padding-left: 35%; margin-top: -10%;">September 15</p>
-                            <p style="padding-left: 35%; margin-top: -12%;">Monday</p>
-                            <p class="fs-1 p-4" style="margin-top: -10%;"><i class=" fs-2 bi bi-thermometer-half"></i>25<sup>o</sup></p>
-                            <p style="padding-left: 35%; margin-top: -20%;">Feels like 23<sup>o</sup></p>                        
-                        </div>
-                        <div class="card-img-top">   
-                            <div class="col-6">
-                                <img src="images\Capture.JPG" alt=""/>
-                            </div>                
-                            <p class="mt-2" style="padding-left: 10%;">cloudy</p>      
-                        </div>
-                        <div class="col-3">
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-end align-items-center">
-                                    <h3>
-                                        <i class="bi bi-three-dots"></i>
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="col-1">
-                                    <i class="bi bi-sunrise"></i>
-                                </div>
-                                <div class="col-11">
-                                    <p class="mb-1 mx-3">Sunrise 7:00</p>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="col-1">
-                                    <i class="bi bi-sunset"></i> 
-                                </div>
-                                <div class="col-11">
-                                    <p class="mb-1 mx-3">Sunset 19:20</p>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="col-1">
-                                    <i class="bi bi-droplet"></i>
-                                </div>
-                                <div class="col-11">
-                                    <p class="mb-1 mx-3"> 60%</p>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="col-1">
-                                    <i class="bi bi-wind"></i> 
-                                </div>
-                                <div class="col-11">
-                                    <p class="mb-1 mx-3">10km/h</p>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="col-1">
-                                    <i class="bi bi-compass"></i> 
-                                </div>
-                                <div class="col-11">
-                                    <p class="mb-1 mx-3">North-East</p>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="col-1">
-                                    <i class="bi bi-arrow-up"></i>
-                                </div>
-                                <div class="col-11">
-                                    <p class="mb-1 mx-3"> 1023.0 mb</p>
-                                </div>
-                            </div> 
-                        </div>    
-                    </div>       
-                    
-                    <div class="card-img-overlay">
-                        <div class="d-flex justify-content-center">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+</body>
+</html>
